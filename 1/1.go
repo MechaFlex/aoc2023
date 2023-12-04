@@ -1,6 +1,7 @@
 package main
 
 import (
+	util "aoc2023"
 	"fmt"
 	"os"
 	"strconv"
@@ -24,7 +25,7 @@ func part1() int {
 		numbers[i] = getNumber(line)
 	}
 
-	return sum(numbers)
+	return util.Sum(numbers)
 }
 
 func getNumber(line string) int {
@@ -50,14 +51,4 @@ func getNumber(line string) int {
 	}
 
 	return firstDigit*10 + lastDigit
-}
-
-func sum(numbers []int) int {
-	sum := 0
-
-	for _, number := range numbers {
-		sum += number
-	}
-
-	return sum
 }

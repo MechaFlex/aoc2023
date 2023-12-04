@@ -1,6 +1,7 @@
 package main
 
 import (
+	util "aoc2023"
 	"fmt"
 	"os"
 	"strings"
@@ -24,7 +25,7 @@ func part2() int {
 		numbers[i] = withStringsGetNumber(line)
 	}
 
-	return sum(numbers)
+	return util.Sum(numbers)
 }
 
 func withStringsGetNumber(line string) int {
